@@ -1,2 +1,5 @@
-Flask==1.1.2
+Flask
+requests
+cloudscraper
+beautifulsoup4
 gunicorn

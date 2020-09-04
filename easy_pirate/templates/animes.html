@@ -2,9 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Animes</title>
+  <title>{{ title }}</title>
 </head>
 <body>
-  <h1>Choose an anime!</h1>
+  <h1>Search an anime!</h1>
+  <form action="" method="post">
+    <input type="text" name="animeTitle">
+  </form>
+  <ul>
+    {% for anime in matchingAnimes %}
+      <li>
+        <a href="/animes/{{ anime["urlTitle"] }}/1/subs/">{{ anime["title"] }}</a>
+      </li>
+    {% endfor %}
+  </ul>
 </body>
 </html>
